@@ -1,0 +1,1038 @@
+2024-08-13 13:42:06.007 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-13 13:42:06.842 -05:00 [DBG] Hosting starting
+2024-08-13 13:42:06.942 -05:00 [INF] User profile is available. Using 'C:\Users\spatino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-13 13:42:06.957 -05:00 [DBG] Reading data from file 'C:\Users\spatino\AppData\Local\ASP.NET\DataProtection-Keys\key-12ed5171-7863-4d3e-a216-6f5439158e60.xml'.
+2024-08-13 13:42:06.998 -05:00 [DBG] Found key {12ed5171-7863-4d3e-a216-6f5439158e60}.
+2024-08-13 13:42:07.024 -05:00 [DBG] Considering key {12ed5171-7863-4d3e-a216-6f5439158e60} with expiration date 2024-09-28 19:27:42Z as default key.
+2024-08-13 13:42:07.033 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-13 13:42:07.041 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-13 13:42:07.043 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-13 13:42:07.050 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-13 13:42:07.052 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-13 13:42:07.054 -05:00 [DBG] Using key {12ed5171-7863-4d3e-a216-6f5439158e60} as the default key.
+2024-08-13 13:42:07.056 -05:00 [DBG] Key ring with default key {12ed5171-7863-4d3e-a216-6f5439158e60} was loaded during application startup.
+2024-08-13 13:42:07.779 -05:00 [INF] Now listening on: https://localhost:7299
+2024-08-13 13:42:07.779 -05:00 [INF] Now listening on: http://localhost:5219
+2024-08-13 13:42:07.779 -05:00 [DBG] Loaded hosting startup assembly biblioteca-backend
+2024-08-13 13:42:07.780 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-13 13:42:07.780 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-13 13:42:07.781 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-13 13:42:07.782 -05:00 [INF] Hosting environment: Development
+2024-08-13 13:42:07.782 -05:00 [INF] Content root path: C:\Users\spatino\Documents\Proyeco - Biblioteca\biblioteca-backend
+2024-08-13 13:42:07.782 -05:00 [DBG] Hosting started
+2024-08-13 13:42:07.851 -05:00 [DBG] Connection id "0HN5ROUH7IHNG" received FIN.
+2024-08-13 13:42:07.907 -05:00 [DBG] Connection id "0HN5ROUH7IHNG" accepted.
+2024-08-13 13:42:07.932 -05:00 [DBG] Connection id "0HN5ROUH7IHNG" started.
+2024-08-13 13:42:08.021 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-13 13:42:08.233 -05:00 [DBG] Connection id "0HN5ROUH7IHNG" stopped.
+2024-08-13 13:42:08.239 -05:00 [DBG] Connection id "0HN5ROUH7IHNG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-13 13:42:13.032 -05:00 [DBG] Connection id "0HN5ROUH7IHNH" accepted.
+2024-08-13 13:42:13.033 -05:00 [DBG] Connection id "0HN5ROUH7IHNH" started.
+2024-08-13 13:42:13.362 -05:00 [DBG] Connection 0HN5ROUH7IHNH established using the following protocol: "Tls12"
+2024-08-13 13:42:13.641 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/index.html - null null
+2024-08-13 13:42:14.683 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-13 13:42:14.732 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-13 13:42:14.736 -05:00 [DBG] Request did not match any endpoints
+2024-08-13 13:42:14.934 -05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-13 13:42:14.937 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-13 13:42:15.100 -05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-13 13:42:15.100 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-13 13:42:15.106 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/index.html - 200 null text/html;charset=utf-8 1477.0708ms
+2024-08-13 13:42:15.589 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-13 13:42:15.598 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 8.6599ms
+2024-08-13 13:42:15.810 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_vs/browserLink - null null
+2024-08-13 13:42:15.928 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.5053ms
+2024-08-13 13:42:16.605 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - null null
+2024-08-13 13:42:16.605 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-13 13:42:16.605 -05:00 [DBG] Request did not match any endpoints
+2024-08-13 13:42:16.836 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 230.6849ms
+2024-08-13 13:45:50.533 -05:00 [DBG] Connection id "0HN5ROUH7IHNI" accepted.
+2024-08-13 13:45:50.534 -05:00 [DBG] Connection id "0HN5ROUH7IHNI" started.
+2024-08-13 13:45:50.563 -05:00 [DBG] Connection 0HN5ROUH7IHNI established using the following protocol: "Tls12"
+2024-08-13 13:45:50.592 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Perfiles/ - null null
+2024-08-13 13:45:50.623 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Perfiles/'
+2024-08-13 13:45:50.623 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:45:50.629 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:50.631 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:50.631 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:50.632 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:45:50.634 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Perfiles/ - 204 null null 54.4846ms
+2024-08-13 13:45:50.646 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7299/api/Perfiles/ - application/json 54
+2024-08-13 13:45:50.646 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Perfiles/'
+2024-08-13 13:45:50.652 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend)' with route pattern 'api/Perfiles' is valid for the request path '/api/Perfiles/'
+2024-08-13 13:45:50.654 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend)'
+2024-08-13 13:45:50.655 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:50.655 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:50.655 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:50.777 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-08-13 13:45:50.779 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend)'
+2024-08-13 13:45:50.810 -05:00 [INF] Route matched with {action = "Post", controller = "Perfiles"}. Executing controller action with signature System.Object Post(biblioteca_backend.Models.DTOs.LogInModel) on controller biblioteca_backend.Controllers.PerfilesController (biblioteca-backend).
+2024-08-13 13:45:50.811 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:45:50.811 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:45:50.811 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:45:50.811 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:45:50.812 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:45:50.813 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.PerfilesController (biblioteca-backend)
+2024-08-13 13:45:51.045 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-13 13:45:51.089 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.PerfilesController (biblioteca-backend)
+2024-08-13 13:45:51.128 -05:00 [DBG] Attempting to bind parameter 'logInModel' of type 'biblioteca_backend.Models.DTOs.LogInModel' ...
+2024-08-13 13:45:51.132 -05:00 [DBG] Attempting to bind parameter 'logInModel' of type 'biblioteca_backend.Models.DTOs.LogInModel' using the name '' in request data ...
+2024-08-13 13:45:51.134 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-13 13:45:51.147 -05:00 [DBG] Connection id "0HN5ROUH7IHNI", Request id "0HN5ROUH7IHNI:00000003": started reading request body.
+2024-08-13 13:45:51.147 -05:00 [DBG] Connection id "0HN5ROUH7IHNI", Request id "0HN5ROUH7IHNI:00000003": done reading request body.
+2024-08-13 13:45:51.152 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'biblioteca_backend.Models.DTOs.LogInModel'
+2024-08-13 13:45:51.154 -05:00 [DBG] Done attempting to bind parameter 'logInModel' of type 'biblioteca_backend.Models.DTOs.LogInModel'.
+2024-08-13 13:45:51.154 -05:00 [DBG] Done attempting to bind parameter 'logInModel' of type 'biblioteca_backend.Models.DTOs.LogInModel'.
+2024-08-13 13:45:51.154 -05:00 [DBG] Attempting to validate the bound parameter 'logInModel' of type 'biblioteca_backend.Models.DTOs.LogInModel' ...
+2024-08-13 13:45:51.164 -05:00 [DBG] Done attempting to validate the bound parameter 'logInModel' of type 'biblioteca_backend.Models.DTOs.LogInModel'.
+2024-08-13 13:45:51.296 -05:00 [INF] Executing action method biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:45:51.337 -05:00 [DBG] Iniciando sesión...
+2024-08-13 13:45:52.435 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:45:52.546 -05:00 [DBG] Compiling query expression: 
+'DbSet<Perfil>()
+    .FirstOrDefault(p => p.Correo == __8__locals1_logInModel_Correo_0 && p.Contrasena == __claveCifrada_1)'
+2024-08-13 13:45:52.848 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Perfil>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Perfil.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Perfil.Apellido (string) Required, 1], [Property: Perfil.Contrasena (string) Required, 2], [Property: Perfil.Correo (string) Required, 3], [Property: Perfil.Direccion (string) Required, 4], [Property: Perfil.IdRol (int) Required FK Index, 5], [Property: Perfil.Nombre (string) Required, 6], [Property: Perfil.Telefono (string) Required, 7] }
+        SELECT TOP(1) p.Id, p.Apellido, p.Contrasena, p.Correo, p.Direccion, p.IdRol, p.Nombre, p.Telefono
+        FROM Perfil AS p
+        WHERE (p.Correo == @__8__locals1_logInModel_Correo_0) && (p.Contrasena == @__claveCifrada_1)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Perfil>, 
+    biblioteca_backend.DBBibliotecaContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-08-13 13:45:52.901 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:45:52.929 -05:00 [DBG] Created DbConnection. (26ms).
+2024-08-13 13:45:52.932 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.466 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.471 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:45:53.480 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2024-08-13 13:45:53.495 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (25ms).
+2024-08-13 13:45:53.513 -05:00 [DBG] Executing DbCommand [Parameters=[@__8__locals1_logInModel_Correo_0='?' (Size = 4000), @__claveCifrada_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Apellido], [p].[Contrasena], [p].[Correo], [p].[Direccion], [p].[IdRol], [p].[Nombre], [p].[Telefono]
+FROM [Perfil] AS [p]
+WHERE [p].[Correo] = @__8__locals1_logInModel_Correo_0 AND [p].[Contrasena] = @__claveCifrada_1
+2024-08-13 13:45:53.589 -05:00 [INF] Executed DbCommand (83ms) [Parameters=[@__8__locals1_logInModel_Correo_0='?' (Size = 4000), @__claveCifrada_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Apellido], [p].[Contrasena], [p].[Correo], [p].[Direccion], [p].[IdRol], [p].[Nombre], [p].[Telefono]
+FROM [Perfil] AS [p]
+WHERE [p].[Correo] = @__8__locals1_logInModel_Correo_0 AND [p].[Contrasena] = @__claveCifrada_1
+2024-08-13 13:45:53.642 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Perfil' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:53.675 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.685 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 90ms reading results.
+2024-08-13 13:45:53.688 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.695 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (6ms).
+2024-08-13 13:45:53.696 -05:00 [DBG] Compiling query expression: 
+'DbSet<Rol>()
+    .FirstOrDefault(r => r.Id == ___perfil_IdRol_0)'
+2024-08-13 13:45:53.700 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Rol>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Rol.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Rol.Nombre (string) Required, 1] }
+        SELECT TOP(1) r.Id, r.Nombre
+        FROM Rol AS r
+        WHERE r.Id == @___perfil_IdRol_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Rol>, 
+    biblioteca_backend.DBBibliotecaContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-08-13 13:45:53.700 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.701 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.701 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:45:53.701 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:45:53.702 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:45:53.702 -05:00 [DBG] Executing DbCommand [Parameters=[@___perfil_IdRol_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Nombre]
+FROM [Rol] AS [r]
+WHERE [r].[Id] = @___perfil_IdRol_0
+2024-08-13 13:45:53.709 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@___perfil_IdRol_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Nombre]
+FROM [Rol] AS [r]
+WHERE [r].[Id] = @___perfil_IdRol_0
+2024-08-13 13:45:53.730 -05:00 [DBG] The navigation 'Perfil.Rol' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:53.745 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Rol' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:53.748 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.748 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 38ms reading results.
+2024-08-13 13:45:53.748 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.748 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:45:53.788 -05:00 [INF] Inicio de sesión exitoso
+2024-08-13 13:45:53.794 -05:00 [INF] Executed action method biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2493.6648ms.
+2024-08-13 13:45:53.797 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:45:53.799 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:45:53.799 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:45:53.799 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:45:53.800 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:45:53.800 -05:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType6`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-13 13:45:53.810 -05:00 [INF] Executed action biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend) in 2995.0246ms
+2024-08-13 13:45:53.811 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.PerfilesController.Post (biblioteca-backend)'
+2024-08-13 13:45:53.813 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:45:53.818 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:53.823 -05:00 [DBG] Disposed connection to database '' on server '' (4ms).
+2024-08-13 13:45:53.824 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7299/api/Perfiles/ - 200 null application/json; charset=utf-8 3177.749ms
+2024-08-13 13:45:53.845 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Generos - null null
+2024-08-13 13:45:53.845 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=false - null null
+2024-08-13 13:45:53.847 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Libros/'
+2024-08-13 13:45:53.847 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Generos'
+2024-08-13 13:45:53.847 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:45:53.847 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:45:53.847 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:53.847 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:53.848 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:53.848 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:53.848 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:53.848 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:53.848 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:45:53.848 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:45:53.848 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=false - 204 null null 2.9675ms
+2024-08-13 13:45:53.848 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Generos - 204 null null 3.3269ms
+2024-08-13 13:45:53.883 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=false - null null
+2024-08-13 13:45:53.883 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Generos - null null
+2024-08-13 13:45:53.883 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Libros/'
+2024-08-13 13:45:53.883 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Generos'
+2024-08-13 13:45:53.883 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend)' with route pattern 'api/Generos' is valid for the request path '/api/Generos'
+2024-08-13 13:45:53.883 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)' with route pattern 'api/Libros' is valid for the request path '/api/Libros/'
+2024-08-13 13:45:53.883 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-08-13 13:45:53.883 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend)'
+2024-08-13 13:45:53.884 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:53.884 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:53.884 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:53.884 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:53.884 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:53.884 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:53.966 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:45:53.966 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:45:53.970 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:45:53.970 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:45:53.980 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:45:53.980 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:45:53.980 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend)'
+2024-08-13 13:45:53.980 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-08-13 13:45:53.983 -05:00 [INF] Route matched with {action = "Get", controller = "Libros"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Boolean) on controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend).
+2024-08-13 13:45:53.983 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:45:53.983 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:45:53.983 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:45:53.983 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:45:53.983 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:45:53.983 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend)
+2024-08-13 13:45:53.985 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend)
+2024-08-13 13:45:53.985 -05:00 [INF] Route matched with {action = "Get", controller = "Generos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller biblioteca_backend.Controllers.GenerosController (biblioteca-backend).
+2024-08-13 13:45:53.985 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:45:53.985 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:45:53.985 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:45:53.985 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:45:53.985 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:45:53.986 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.GenerosController (biblioteca-backend)
+2024-08-13 13:45:53.990 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.GenerosController (biblioteca-backend)
+2024-08-13 13:45:53.991 -05:00 [DBG] Attempting to bind parameter 'mostrarActivos' of type 'System.Boolean' ...
+2024-08-13 13:45:53.992 -05:00 [DBG] Attempting to bind parameter 'mostrarActivos' of type 'System.Boolean' using the name 'mostrarActivos' in request data ...
+2024-08-13 13:45:53.994 -05:00 [DBG] Done attempting to bind parameter 'mostrarActivos' of type 'System.Boolean'.
+2024-08-13 13:45:53.994 -05:00 [DBG] Done attempting to bind parameter 'mostrarActivos' of type 'System.Boolean'.
+2024-08-13 13:45:53.994 -05:00 [DBG] Attempting to validate the bound parameter 'mostrarActivos' of type 'System.Boolean' ...
+2024-08-13 13:45:54.034 -05:00 [DBG] Done attempting to validate the bound parameter 'mostrarActivos' of type 'System.Boolean'.
+2024-08-13 13:45:54.034 -05:00 [INF] Executing action method biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:45:54.093 -05:00 [INF] Executing action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:45:54.099 -05:00 [DBG] Consultando libros...
+2024-08-13 13:45:54.122 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:45:54.122 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:45:54.125 -05:00 [DBG] Compiling query expression: 
+'DbSet<Genero>()'
+2024-08-13 13:45:54.130 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Genero>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Genero.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Genero.Nombre (string) Required, 1] }
+        SELECT g.Id, g.Nombre
+        FROM Genero AS g), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Genero>, 
+    biblioteca_backend.DBBibliotecaContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-13 13:45:54.142 -05:00 [DBG] Compiling query expression: 
+'DbSet<Libro>()
+    .Join(
+        inner: DbSet<Genero>(), 
+        outerKeySelector: L => L.IdGenero, 
+        innerKeySelector: G => G.Id, 
+        resultSelector: (L, G) => new { 
+            L = L, 
+            G = G
+         })
+    .Where(<>h__TransparentIdentifier0 => True)
+    .Select(<>h__TransparentIdentifier0 => new { 
+        id = <>h__TransparentIdentifier0.L.Id, 
+        titulo = <>h__TransparentIdentifier0.L.Titulo, 
+        autor = <>h__TransparentIdentifier0.L.Autor, 
+        anio = <>h__TransparentIdentifier0.L.Anio, 
+        idGenero = <>h__TransparentIdentifier0.L.IdGenero, 
+        genero = <>h__TransparentIdentifier0.G.Nombre, 
+        activo = <>h__TransparentIdentifier0.L.Activo
+     })'
+2024-08-13 13:45:54.148 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:45:54.149 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:45:54.152 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.157 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.157 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:45:54.160 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-08-13 13:45:54.160 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-08-13 13:45:54.161 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Nombre]
+FROM [Genero] AS [g]
+2024-08-13 13:45:54.224 -05:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Nombre]
+FROM [Genero] AS [g]
+2024-08-13 13:45:54.251 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.254 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<<>f__AnonymousType5<int, string, string, int, int, string, bool>>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            id -> 0
+            titulo -> 1
+            autor -> 2
+            anio -> 3
+            idGenero -> 4
+            genero -> 5
+            activo -> 6
+        SELECT l.Id AS id, l.Titulo AS titulo, l.Autor AS autor, l.Anio AS anio, l.IdGenero AS idGenero, g.Nombre AS genero, l.Activo AS activo
+        FROM Libro AS l
+        INNER JOIN Genero AS g ON l.IdGenero == g.Id), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, <>f__AnonymousType5<int, string, string, int, int, string, bool>>, 
+    biblioteca_backend.DBBibliotecaContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-13 13:45:54.256 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:45:54.256 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:45:54.256 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.260 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.260 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.260 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.260 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.261 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Genero' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:54.262 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.262 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:45:54.262 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:45:54.262 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:45:54.262 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+2024-08-13 13:45:54.266 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.266 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 39ms reading results.
+2024-08-13 13:45:54.268 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+2024-08-13 13:45:54.269 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.269 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:45:54.270 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.270 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-13 13:45:54.270 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.271 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:45:54.273 -05:00 [INF] Consulta de libros exitosa
+2024-08-13 13:45:54.274 -05:00 [INF] Executed action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 180.3926ms.
+2024-08-13 13:45:54.274 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:45:54.274 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:45:54.274 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:45:54.275 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:45:54.275 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:45:54.275 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType5`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-13 13:45:54.275 -05:00 [INF] Executed action method biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 240.4677ms.
+2024-08-13 13:45:54.277 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:45:54.277 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:45:54.277 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:45:54.278 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:45:54.278 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:45:54.278 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[biblioteca_backend.Models.Genero, biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-13 13:45:54.282 -05:00 [INF] Executed action biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend) in 296.021ms
+2024-08-13 13:45:54.282 -05:00 [INF] Executed action biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) in 298.6296ms
+2024-08-13 13:45:54.282 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-08-13 13:45:54.282 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:45:54.283 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.GenerosController.Get (biblioteca-backend)'
+2024-08-13 13:45:54.283 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.283 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:45:54.283 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=false - 200 null application/json; charset=utf-8 400.9399ms
+2024-08-13 13:45:54.284 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:45:54.285 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:54.285 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:45:54.285 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Generos - 200 null application/json; charset=utf-8 402.2772ms
+2024-08-13 13:45:57.018 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 13:45:57.020 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:45:57.021 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:45:57.021 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:57.021 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:57.021 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:57.021 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:45:57.022 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - 204 null null 3.4823ms
+2024-08-13 13:45:57.027 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 13:45:57.029 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:45:57.029 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)' with route pattern 'api/Archivos/ConsultarDocumentos' is valid for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:45:57.029 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:45:57.029 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:45:57.029 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:45:57.029 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:45:57.033 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:45:57.033 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:45:57.035 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:45:57.035 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:45:57.042 -05:00 [INF] Route matched with {action = "ConsultarTodos", controller = "Archivos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConsultarTodos() on controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend).
+2024-08-13 13:45:57.042 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:45:57.042 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:45:57.042 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:45:57.042 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:45:57.042 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:45:57.043 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:45:57.043 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:45:57.072 -05:00 [INF] Executing action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:45:57.078 -05:00 [DBG] Consultando archivos sin eliminar...
+2024-08-13 13:45:57.168 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:45:57.172 -05:00 [DBG] Compiling query expression: 
+'DbSet<Archivo>()
+    .Where(A => A.FechaEliminacion == null)
+    .OrderByDescending(A => A.FechaCarga)'
+2024-08-13 13:45:57.181 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Archivo>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Archivo.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Archivo.FechaCarga (DateTime) Required, 1], [Property: Archivo.FechaEliminacion (DateTime?), 2], [Property: Archivo.Nombre (string) Required, 3], [Property: Archivo.NumeroDescargas (int) Required, 4], [Property: Archivo.RutaDocumento (string) Required, 5] }
+        SELECT a.Id, a.FechaCarga, a.FechaEliminacion, a.Nombre, a.NumeroDescargas, a.RutaDocumento
+        FROM Archivo AS a
+        WHERE a.FechaEliminacion == NULL
+        ORDER BY a.FechaCarga DESC), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Archivo>, 
+    biblioteca_backend.DBBibliotecaContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-13 13:45:57.188 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:45:57.188 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:45:57.188 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:57.188 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:57.188 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:45:57.188 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:45:57.188 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:45:57.189 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 13:45:57.194 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 13:45:57.201 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.222 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.222 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.222 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.222 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.222 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.222 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.223 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.223 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.223 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:45:57.223 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:57.223 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 28ms reading results.
+2024-08-13 13:45:57.223 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:57.223 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:45:57.226 -05:00 [INF] Consulta de archivos exitosa
+2024-08-13 13:45:57.226 -05:00 [INF] Executed action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 153.3938ms.
+2024-08-13 13:45:57.226 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:45:57.226 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:45:57.226 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:45:57.226 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:45:57.226 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:45:57.226 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[biblioteca_backend.Models.Archivo, biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-13 13:45:57.241 -05:00 [INF] Executed action biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) in 198.4352ms
+2024-08-13 13:45:57.241 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:45:57.241 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:45:57.241 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:45:57.241 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:45:57.242 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - 200 null application/json; charset=utf-8 214.9737ms
+2024-08-13 13:49:52.171 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Archivos?idArchivo=20&idPerfil=31 - null null
+2024-08-13 13:49:52.172 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos'
+2024-08-13 13:49:52.172 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:49:52.172 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:49:52.172 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:49:52.172 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:49:52.172 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:49:52.173 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Archivos?idArchivo=20&idPerfil=31 - 204 null null 1.2679ms
+2024-08-13 13:49:52.190 -05:00 [INF] Request starting HTTP/2 DELETE https://localhost:7299/api/Archivos?idArchivo=20&idPerfil=31 - null null
+2024-08-13 13:49:52.190 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos'
+2024-08-13 13:49:52.190 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend)' with route pattern 'api/Archivos' is valid for the request path '/api/Archivos'
+2024-08-13 13:49:52.190 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend)'
+2024-08-13 13:49:52.190 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:49:52.190 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:49:52.190 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:49:52.190 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:49:52.190 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:49:52.192 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:49:52.193 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend)'
+2024-08-13 13:49:52.197 -05:00 [INF] Route matched with {action = "EliminarDocumento", controller = "Archivos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EliminarDocumento(Int32, Int32) on controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend).
+2024-08-13 13:49:52.197 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:49:52.198 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:49:52.198 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:49:52.198 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:49:52.198 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:49:52.198 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:49:52.198 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:49:52.198 -05:00 [DBG] Attempting to bind parameter 'idArchivo' of type 'System.Int32' ...
+2024-08-13 13:49:52.199 -05:00 [DBG] Attempting to bind parameter 'idArchivo' of type 'System.Int32' using the name 'idArchivo' in request data ...
+2024-08-13 13:49:52.199 -05:00 [DBG] Done attempting to bind parameter 'idArchivo' of type 'System.Int32'.
+2024-08-13 13:49:52.199 -05:00 [DBG] Done attempting to bind parameter 'idArchivo' of type 'System.Int32'.
+2024-08-13 13:49:52.199 -05:00 [DBG] Attempting to validate the bound parameter 'idArchivo' of type 'System.Int32' ...
+2024-08-13 13:49:52.199 -05:00 [DBG] Done attempting to validate the bound parameter 'idArchivo' of type 'System.Int32'.
+2024-08-13 13:49:52.199 -05:00 [DBG] Attempting to bind parameter 'idPerfil' of type 'System.Int32' ...
+2024-08-13 13:49:52.199 -05:00 [DBG] Attempting to bind parameter 'idPerfil' of type 'System.Int32' using the name 'idPerfil' in request data ...
+2024-08-13 13:49:52.199 -05:00 [DBG] Done attempting to bind parameter 'idPerfil' of type 'System.Int32'.
+2024-08-13 13:49:52.199 -05:00 [DBG] Done attempting to bind parameter 'idPerfil' of type 'System.Int32'.
+2024-08-13 13:49:52.199 -05:00 [DBG] Attempting to validate the bound parameter 'idPerfil' of type 'System.Int32' ...
+2024-08-13 13:49:52.199 -05:00 [DBG] Done attempting to validate the bound parameter 'idPerfil' of type 'System.Int32'.
+2024-08-13 13:49:52.230 -05:00 [INF] Executing action method biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:49:52.237 -05:00 [DBG] Eliminando archivo con id: $20...
+2024-08-13 13:49:52.240 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:49:52.243 -05:00 [DBG] Compiling query expression: 
+'DbSet<Archivo>()
+    .FirstOrDefault(a => a.Id == __idArchivo_0)'
+2024-08-13 13:49:52.252 -05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Archivo>(
+    asyncEnumerable: new SingleQueryingEnumerable<Archivo>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Archivo.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Archivo.FechaCarga (DateTime) Required, 1], [Property: Archivo.FechaEliminacion (DateTime?), 2], [Property: Archivo.Nombre (string) Required, 3], [Property: Archivo.NumeroDescargas (int) Required, 4], [Property: Archivo.RutaDocumento (string) Required, 5] }
+            SELECT TOP(1) a.Id, a.FechaCarga, a.FechaEliminacion, a.Nombre, a.NumeroDescargas, a.RutaDocumento
+            FROM Archivo AS a
+            WHERE a.Id == @__idArchivo_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Archivo>, 
+        biblioteca_backend.DBBibliotecaContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-13 13:49:52.255 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:49:52.255 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:49:52.255 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.255 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.256 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:49:52.256 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.256 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.256 -05:00 [DBG] Executing DbCommand [Parameters=[@__idArchivo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[Id] = @__idArchivo_0
+2024-08-13 13:49:52.269 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[@__idArchivo_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[Id] = @__idArchivo_0
+2024-08-13 13:49:52.269 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.270 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.271 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-13 13:49:52.271 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.271 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:49:52.285 -05:00 [DBG] An entity of type 'Archivo' tracked by 'DBBibliotecaContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.288 -05:00 [DBG] SaveChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:49:52.291 -05:00 [DBG] DetectChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:49:52.308 -05:00 [DBG] DetectChanges completed for 'DBBibliotecaContext'.
+2024-08-13 13:49:52.380 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.380 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.383 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:49:52.383 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.383 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.383 -05:00 [DBG] Executing DbCommand [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Archivo] SET [FechaCarga] = @p0, [FechaEliminacion] = @p1, [Nombre] = @p2, [NumeroDescargas] = @p3, [RutaDocumento] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2024-08-13 13:49:52.389 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Archivo] SET [FechaCarga] = @p0, [FechaEliminacion] = @p1, [Nombre] = @p2, [NumeroDescargas] = @p3, [RutaDocumento] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2024-08-13 13:49:52.396 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.396 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 6ms reading results.
+2024-08-13 13:49:52.398 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.398 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:49:52.401 -05:00 [DBG] An entity of type 'Archivo' tracked by 'DBBibliotecaContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.403 -05:00 [DBG] SaveChanges completed for 'DBBibliotecaContext' with 1 entities written to the database.
+2024-08-13 13:49:52.433 -05:00 [DBG] 'DBBibliotecaContext' generated a temporary value for the property 'RegistroArchivoPerfil.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.445 -05:00 [DBG] The navigation 'RegistroArchivoPerfil.Archivo' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.449 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'RegistroArchivoPerfil' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.450 -05:00 [DBG] SaveChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:49:52.450 -05:00 [DBG] DetectChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:49:52.458 -05:00 [DBG] DetectChanges completed for 'DBBibliotecaContext'.
+2024-08-13 13:49:52.498 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.499 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.499 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:49:52.499 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.499 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.499 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegistroArchivoPerfil] ([Fecha], [IdAccion], [IdArchivo], [IdPerfil])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-08-13 13:49:52.510 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegistroArchivoPerfil] ([Fecha], [IdAccion], [IdArchivo], [IdPerfil])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-08-13 13:49:52.521 -05:00 [DBG] The foreign key property 'RegistroArchivoPerfil.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-13 13:49:52.527 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.528 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 17ms reading results.
+2024-08-13 13:49:52.528 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.528 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:49:52.532 -05:00 [DBG] An entity of type 'RegistroArchivoPerfil' tracked by 'DBBibliotecaContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.532 -05:00 [DBG] SaveChanges completed for 'DBBibliotecaContext' with 1 entities written to the database.
+2024-08-13 13:49:52.535 -05:00 [INF] Archivo eliminado exitosamente
+2024-08-13 13:49:52.535 -05:00 [INF] Executed action method biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 304.7243ms.
+2024-08-13 13:49:52.535 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:49:52.535 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:49:52.536 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:49:52.536 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:49:52.536 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:49:52.536 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-13 13:49:52.537 -05:00 [INF] Executed action biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend) in 338.8879ms
+2024-08-13 13:49:52.537 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.ArchivosController.EliminarDocumento (biblioteca-backend)'
+2024-08-13 13:49:52.537 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:49:52.537 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.537 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:49:52.537 -05:00 [INF] Request finished HTTP/2 DELETE https://localhost:7299/api/Archivos?idArchivo=20&idPerfil=31 - 200 null application/json; charset=utf-8 350.8419ms
+2024-08-13 13:49:52.546 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 13:49:52.547 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:49:52.547 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:49:52.547 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:49:52.547 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:49:52.547 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:49:52.547 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:49:52.547 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - 204 null null 1.2441ms
+2024-08-13 13:49:52.550 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 13:49:52.550 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:49:52.550 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)' with route pattern 'api/Archivos/ConsultarDocumentos' is valid for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:49:52.550 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:49:52.550 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:49:52.550 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:49:52.550 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:49:52.551 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:49:52.551 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:49:52.551 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:49:52.551 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:49:52.552 -05:00 [INF] Route matched with {action = "ConsultarTodos", controller = "Archivos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConsultarTodos() on controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend).
+2024-08-13 13:49:52.552 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:49:52.552 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:49:52.552 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:49:52.552 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:49:52.552 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:49:52.552 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:49:52.552 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:49:52.586 -05:00 [INF] Executing action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:49:52.590 -05:00 [DBG] Consultando archivos sin eliminar...
+2024-08-13 13:49:52.591 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:49:52.601 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:49:52.601 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:49:52.601 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.601 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.601 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:49:52.602 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.602 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:49:52.602 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 13:49:52.605 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 13:49:52.606 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.606 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.606 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.606 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.607 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.607 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.607 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.607 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.607 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:49:52.607 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.608 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-13 13:49:52.608 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.608 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:49:52.611 -05:00 [INF] Consulta de archivos exitosa
+2024-08-13 13:49:52.611 -05:00 [INF] Executed action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.522ms.
+2024-08-13 13:49:52.611 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:49:52.611 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:49:52.611 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:49:52.611 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:49:52.611 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:49:52.612 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[biblioteca_backend.Models.Archivo, biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-13 13:49:52.612 -05:00 [INF] Executed action biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) in 60.0214ms
+2024-08-13 13:49:52.612 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:49:52.612 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:49:52.612 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:49:52.612 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:49:52.612 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - 200 null application/json; charset=utf-8 63.1142ms
+2024-08-13 13:49:58.078 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Archivos?idPerfil=31 - null null
+2024-08-13 13:49:58.079 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos'
+2024-08-13 13:49:58.080 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:49:58.080 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:49:58.080 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:49:58.080 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:49:58.081 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:49:58.081 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Archivos?idPerfil=31 - 204 null null 3.0467ms
+2024-08-13 13:49:58.086 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7299/api/Archivos?idPerfil=31 - multipart/form-data; boundary=----WebKitFormBoundaryRrEeA4Rj3ZzmDXhw 72864
+2024-08-13 13:49:58.086 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos'
+2024-08-13 13:49:58.086 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend)' with route pattern 'api/Archivos' is valid for the request path '/api/Archivos'
+2024-08-13 13:49:58.086 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend)'
+2024-08-13 13:49:58.087 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:49:58.087 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:49:58.087 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:49:58.087 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:49:58.088 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:49:58.106 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:49:58.127 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend)'
+2024-08-13 13:49:58.178 -05:00 [INF] Route matched with {action = "CargarDocumento", controller = "Archivos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CargarDocumento(Microsoft.AspNetCore.Http.IFormFile, Int32) on controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend).
+2024-08-13 13:49:58.178 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:49:58.178 -05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2024-08-13 13:49:58.178 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:49:58.178 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:49:58.178 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:49:58.180 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:49:58.180 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:49:58.185 -05:00 [DBG] Connection id "0HN5ROUH7IHNI", Request id "0HN5ROUH7IHNI:0000001B": started reading request body.
+2024-08-13 13:49:58.185 -05:00 [DBG] Connection id "0HN5ROUH7IHNI", Request id "0HN5ROUH7IHNI:0000001B": done reading request body.
+2024-08-13 13:49:58.205 -05:00 [DBG] Attempting to bind parameter 'archivo' of type 'Microsoft.AspNetCore.Http.IFormFile' ...
+2024-08-13 13:49:58.208 -05:00 [DBG] Attempting to bind parameter 'archivo' of type 'Microsoft.AspNetCore.Http.IFormFile' using the name 'archivo' in request data ...
+2024-08-13 13:49:58.210 -05:00 [DBG] Done attempting to bind parameter 'archivo' of type 'Microsoft.AspNetCore.Http.IFormFile'.
+2024-08-13 13:49:58.210 -05:00 [DBG] Done attempting to bind parameter 'archivo' of type 'Microsoft.AspNetCore.Http.IFormFile'.
+2024-08-13 13:49:58.210 -05:00 [DBG] Attempting to validate the bound parameter 'archivo' of type 'Microsoft.AspNetCore.Http.IFormFile' ...
+2024-08-13 13:49:58.211 -05:00 [DBG] Done attempting to validate the bound parameter 'archivo' of type 'Microsoft.AspNetCore.Http.IFormFile'.
+2024-08-13 13:49:58.211 -05:00 [DBG] Attempting to bind parameter 'idPerfil' of type 'System.Int32' ...
+2024-08-13 13:49:58.211 -05:00 [DBG] Attempting to bind parameter 'idPerfil' of type 'System.Int32' using the name 'idPerfil' in request data ...
+2024-08-13 13:49:58.211 -05:00 [DBG] Done attempting to bind parameter 'idPerfil' of type 'System.Int32'.
+2024-08-13 13:49:58.212 -05:00 [DBG] Done attempting to bind parameter 'idPerfil' of type 'System.Int32'.
+2024-08-13 13:49:58.212 -05:00 [DBG] Attempting to validate the bound parameter 'idPerfil' of type 'System.Int32' ...
+2024-08-13 13:49:58.212 -05:00 [DBG] Done attempting to validate the bound parameter 'idPerfil' of type 'System.Int32'.
+2024-08-13 13:49:58.264 -05:00 [INF] Executing action method biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:50:01.378 -05:00 [DBG] Cargando archivo nuevo al sistema...
+2024-08-13 13:50:01.380 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:50:01.380 -05:00 [DBG] Compiling query expression: 
+'DbSet<Archivo>()
+    .FirstOrDefault(A => A.RutaDocumento == __ruta_0 && A.FechaEliminacion == null)'
+2024-08-13 13:50:01.385 -05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Archivo>(
+    asyncEnumerable: new SingleQueryingEnumerable<Archivo>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Archivo.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Archivo.FechaCarga (DateTime) Required, 1], [Property: Archivo.FechaEliminacion (DateTime?), 2], [Property: Archivo.Nombre (string) Required, 3], [Property: Archivo.NumeroDescargas (int) Required, 4], [Property: Archivo.RutaDocumento (string) Required, 5] }
+            SELECT TOP(1) a.Id, a.FechaCarga, a.FechaEliminacion, a.Nombre, a.NumeroDescargas, a.RutaDocumento
+            FROM Archivo AS a
+            WHERE (a.RutaDocumento == @__ruta_0) && (a.FechaEliminacion == NULL)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Archivo>, 
+        biblioteca_backend.DBBibliotecaContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-13 13:50:01.387 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:50:01.387 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:50:01.387 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.387 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.387 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:50:01.387 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:01.387 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:01.387 -05:00 [DBG] Executing DbCommand [Parameters=[@__ruta_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[RutaDocumento] = @__ruta_0 AND [a].[FechaEliminacion] IS NULL
+2024-08-13 13:50:01.394 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ruta_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[RutaDocumento] = @__ruta_0 AND [a].[FechaEliminacion] IS NULL
+2024-08-13 13:50:01.394 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.394 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-13 13:50:01.394 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.394 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:50:01.397 -05:00 [DBG] Creando archivo en la ruta: $Archivos\4. FDE-076-Guia-No-3-Evaluacion-del-estudiante-en-su-practica-profesional RV V6.docx...
+2024-08-13 13:50:01.402 -05:00 [DBG] 'DBBibliotecaContext' generated a temporary value for the property 'Archivo.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.403 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.404 -05:00 [DBG] SaveChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:50:01.404 -05:00 [DBG] DetectChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:50:01.404 -05:00 [DBG] DetectChanges completed for 'DBBibliotecaContext'.
+2024-08-13 13:50:01.406 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.406 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.407 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:50:01.407 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:01.407 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:01.407 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Archivo] ([FechaCarga], [FechaEliminacion], [Nombre], [NumeroDescargas], [RutaDocumento])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-08-13 13:50:01.412 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Archivo] ([FechaCarga], [FechaEliminacion], [Nombre], [NumeroDescargas], [RutaDocumento])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-08-13 13:50:01.413 -05:00 [DBG] The foreign key property 'Archivo.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-13 13:50:01.422 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.422 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 10ms reading results.
+2024-08-13 13:50:01.423 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.423 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:50:01.426 -05:00 [DBG] An entity of type 'Archivo' tracked by 'DBBibliotecaContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.426 -05:00 [DBG] SaveChanges completed for 'DBBibliotecaContext' with 1 entities written to the database.
+2024-08-13 13:50:01.428 -05:00 [DBG] 'DBBibliotecaContext' generated a temporary value for the property 'RegistroArchivoPerfil.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.428 -05:00 [DBG] The navigation 'RegistroArchivoPerfil.Archivo' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.428 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'RegistroArchivoPerfil' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.429 -05:00 [DBG] SaveChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:50:01.429 -05:00 [DBG] DetectChanges starting for 'DBBibliotecaContext'.
+2024-08-13 13:50:01.429 -05:00 [DBG] DetectChanges completed for 'DBBibliotecaContext'.
+2024-08-13 13:50:01.430 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.430 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.430 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:50:01.430 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:01.430 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:01.430 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegistroArchivoPerfil] ([Fecha], [IdAccion], [IdArchivo], [IdPerfil])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-08-13 13:50:01.439 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegistroArchivoPerfil] ([Fecha], [IdAccion], [IdArchivo], [IdPerfil])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-08-13 13:50:01.440 -05:00 [DBG] The foreign key property 'RegistroArchivoPerfil.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-13 13:50:01.440 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.440 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-13 13:50:01.441 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.441 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:50:01.441 -05:00 [DBG] An entity of type 'RegistroArchivoPerfil' tracked by 'DBBibliotecaContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:01.441 -05:00 [DBG] SaveChanges completed for 'DBBibliotecaContext' with 1 entities written to the database.
+2024-08-13 13:50:01.445 -05:00 [INF] Archivo cargado exitosamente
+2024-08-13 13:50:01.445 -05:00 [INF] Executed action method biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3181.3249ms.
+2024-08-13 13:50:01.446 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:50:01.447 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:50:01.447 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:50:01.447 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:50:01.447 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:50:01.447 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType10`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-13 13:50:01.449 -05:00 [INF] Executed action biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend) in 3270.0055ms
+2024-08-13 13:50:01.449 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.ArchivosController.CargarDocumento (biblioteca-backend)'
+2024-08-13 13:50:01.451 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:50:01.451 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:01.451 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:50:01.451 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7299/api/Archivos?idPerfil=31 - 200 null application/json; charset=utf-8 3366.635ms
+2024-08-13 13:50:03.834 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 13:50:03.834 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:50:03.834 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 13:50:03.835 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:50:03.835 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:50:03.835 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:50:03.835 -05:00 [DBG] The request is a preflight request.
+2024-08-13 13:50:03.835 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - 204 null null 1.3685ms
+2024-08-13 13:50:03.864 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 13:50:03.864 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:50:03.864 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)' with route pattern 'api/Archivos/ConsultarDocumentos' is valid for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 13:50:03.864 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:50:03.864 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 13:50:03.865 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 13:50:03.865 -05:00 [INF] CORS policy execution successful.
+2024-08-13 13:50:03.866 -05:00 [DBG] Successfully validated the token.
+2024-08-13 13:50:03.866 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 13:50:03.866 -05:00 [DBG] Authorization was successful.
+2024-08-13 13:50:03.866 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:50:03.866 -05:00 [INF] Route matched with {action = "ConsultarTodos", controller = "Archivos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConsultarTodos() on controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend).
+2024-08-13 13:50:03.866 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 13:50:03.866 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 13:50:03.866 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 13:50:03.866 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 13:50:03.867 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 13:50:03.867 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:50:03.867 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 13:50:03.910 -05:00 [INF] Executing action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 13:50:03.914 -05:00 [DBG] Consultando archivos sin eliminar...
+2024-08-13 13:50:03.915 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 13:50:03.915 -05:00 [DBG] Creating DbConnection.
+2024-08-13 13:50:03.916 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 13:50:03.916 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:03.916 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:03.916 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 13:50:03.916 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:03.916 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 13:50:03.916 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 13:50:03.919 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 13:50:03.919 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.919 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.919 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.919 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.919 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.920 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.920 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.920 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.920 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.920 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 13:50:03.920 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:03.920 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-13 13:50:03.920 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:03.921 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (0ms).
+2024-08-13 13:50:03.924 -05:00 [INF] Consulta de archivos exitosa
+2024-08-13 13:50:03.926 -05:00 [INF] Executed action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.52ms.
+2024-08-13 13:50:03.926 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 13:50:03.926 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 13:50:03.926 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 13:50:03.927 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 13:50:03.927 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 13:50:03.927 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[biblioteca_backend.Models.Archivo, biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-13 13:50:03.927 -05:00 [INF] Executed action biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) in 60.645ms
+2024-08-13 13:50:03.927 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 13:50:03.928 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 13:50:03.928 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 13:50:03.929 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 13:50:03.929 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - 200 null application/json; charset=utf-8 65.2399ms
+2024-08-13 14:27:00.408 -05:00 [DBG] Connection id "0HN5ROUH7IHNI" received FIN.
+2024-08-13 14:27:00.409 -05:00 [DBG] Connection id "0HN5ROUH7IHNH" received FIN.
+2024-08-13 14:27:00.412 -05:00 [DBG] Connection id "0HN5ROUH7IHNI" is closed. The last processed stream ID was 31.
+2024-08-13 14:27:00.413 -05:00 [DBG] Connection id "0HN5ROUH7IHNI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-13 14:27:00.413 -05:00 [DBG] Connection id "0HN5ROUH7IHNH" is closed. The last processed stream ID was 7.
+2024-08-13 14:27:00.413 -05:00 [DBG] Connection id "0HN5ROUH7IHNH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-13 14:27:00.419 -05:00 [DBG] The connection queue processing loop for 0HN5ROUH7IHNI completed.
+2024-08-13 14:27:00.422 -05:00 [DBG] Connection id "0HN5ROUH7IHNI" stopped.
+2024-08-13 14:27:00.423 -05:00 [DBG] The connection queue processing loop for 0HN5ROUH7IHNH completed.
+2024-08-13 14:27:00.423 -05:00 [DBG] Connection id "0HN5ROUH7IHNH" stopped.
+2024-08-13 14:29:14.316 -05:00 [DBG] Connection id "0HN5ROUH7IHNJ" accepted.
+2024-08-13 14:29:14.317 -05:00 [DBG] Connection id "0HN5ROUH7IHNJ" started.
+2024-08-13 14:29:14.350 -05:00 [DBG] Connection 0HN5ROUH7IHNJ established using the following protocol: "Tls12"
+2024-08-13 14:29:14.353 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 14:29:14.354 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 14:29:14.354 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-08-13 14:29:14.354 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 14:29:14.354 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 14:29:14.354 -05:00 [INF] CORS policy execution successful.
+2024-08-13 14:29:14.354 -05:00 [DBG] The request is a preflight request.
+2024-08-13 14:29:14.354 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Archivos/ConsultarDocumentos - 204 null null 1.2086ms
+2024-08-13 14:29:14.361 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - null null
+2024-08-13 14:29:14.361 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 14:29:14.361 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)' with route pattern 'api/Archivos/ConsultarDocumentos' is valid for the request path '/api/Archivos/ConsultarDocumentos'
+2024-08-13 14:29:14.361 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 14:29:14.361 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-13 14:29:14.362 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-08-13 14:29:14.362 -05:00 [INF] CORS policy execution successful.
+2024-08-13 14:29:14.362 -05:00 [DBG] Successfully validated the token.
+2024-08-13 14:29:14.362 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-13 14:29:14.363 -05:00 [DBG] Authorization was successful.
+2024-08-13 14:29:14.363 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 14:29:14.363 -05:00 [INF] Route matched with {action = "ConsultarTodos", controller = "Archivos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConsultarTodos() on controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend).
+2024-08-13 14:29:14.363 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-13 14:29:14.363 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-13 14:29:14.363 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-13 14:29:14.363 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-13 14:29:14.364 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-13 14:29:14.364 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 14:29:14.364 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.ArchivosController (biblioteca-backend)
+2024-08-13 14:29:14.436 -05:00 [INF] Executing action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) - Validation state: "Valid"
+2024-08-13 14:29:14.442 -05:00 [DBG] Consultando archivos sin eliminar...
+2024-08-13 14:29:14.444 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-08-13 14:29:14.444 -05:00 [DBG] Creating DbConnection.
+2024-08-13 14:29:14.445 -05:00 [DBG] Created DbConnection. (0ms).
+2024-08-13 14:29:14.445 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 14:29:14.566 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 14:29:14.566 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-13 14:29:14.566 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 14:29:14.567 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-13 14:29:14.567 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 14:29:14.582 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FechaCarga], [a].[FechaEliminacion], [a].[Nombre], [a].[NumeroDescargas], [a].[RutaDocumento]
+FROM [Archivo] AS [a]
+WHERE [a].[FechaEliminacion] IS NULL
+ORDER BY [a].[FechaCarga] DESC
+2024-08-13 14:29:14.583 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.583 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.583 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.583 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.584 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.584 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.584 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.584 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.584 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.584 -05:00 [DBG] Context 'DBBibliotecaContext' started tracking 'Archivo' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-13 14:29:14.586 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 14:29:14.587 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 4ms reading results.
+2024-08-13 14:29:14.588 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 14:29:14.589 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (1ms).
+2024-08-13 14:29:14.601 -05:00 [INF] Consulta de archivos exitosa
+2024-08-13 14:29:14.602 -05:00 [INF] Executed action method biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 165.361ms.
+2024-08-13 14:29:14.602 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-13 14:29:14.602 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-08-13 14:29:14.602 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-13 14:29:14.602 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-13 14:29:14.602 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-13 14:29:14.603 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[biblioteca_backend.Models.Archivo, biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-13 14:29:14.603 -05:00 [INF] Executed action biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend) in 239.5841ms
+2024-08-13 14:29:14.604 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.ArchivosController.ConsultarTodos (biblioteca-backend)'
+2024-08-13 14:29:14.604 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-08-13 14:29:14.604 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-08-13 14:29:14.604 -05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-13 14:29:14.604 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Archivos/ConsultarDocumentos - 200 null application/json; charset=utf-8 243.3594ms
+2024-08-13 14:29:31.320 -05:00 [DBG] Connection id "0HN5ROUH7IHNJ" received FIN.
+2024-08-13 14:29:31.320 -05:00 [DBG] Connection id "0HN5ROUH7IHNJ" is closed. The last processed stream ID was 3.
+2024-08-13 14:29:31.320 -05:00 [DBG] Connection id "0HN5ROUH7IHNJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-13 14:29:31.321 -05:00 [DBG] The connection queue processing loop for 0HN5ROUH7IHNJ completed.
+2024-08-13 14:29:31.322 -05:00 [DBG] Connection id "0HN5ROUH7IHNJ" stopped.

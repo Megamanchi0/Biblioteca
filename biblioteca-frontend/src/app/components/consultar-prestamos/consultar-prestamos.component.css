@@ -1,0 +1,12 @@
+li{
+    list-style: none;
+}
+
+/* .tarjeta-prestamo{
+    background-color: #141e30ec;
+    color: white;
+} */
+
+.tarjeta-prestamos{
+    background-color: rgb(231, 232, 233);
+}

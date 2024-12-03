@@ -1,0 +1,36 @@
+<div class="container col-md-7">
+    <div class="card py-2 px-5 my-5 tarjeta-prestamos">
+        <h3 class="text-center my-2">Préstamos activos</h3>
+
+        <div class="text-center my-3" *ngIf="isLoading">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <div class="card p-3 my-2 tarjeta-prestamo" *ngFor="let prestamo of prestamos">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><b>Nombre: </b>{{prestamo.datosPerfil.nombre}} {{prestamo.datosPerfil.apellido}}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><b>Correo: </b>{{prestamo.datosPerfil.correo}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><b>Teléfono: </b>{{prestamo.datosPerfil.telefono}}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><b>Fecha de préstamo: </b>{{prestamo.fechaPrestamo | date:'dd/MM/yyyy'}}</p>
+                </div>
+            </div>
+            <p><b>Libros prestados</b></p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-secondary" *ngFor="let libro of prestamo.libros">
+                    {{libro.titulo}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

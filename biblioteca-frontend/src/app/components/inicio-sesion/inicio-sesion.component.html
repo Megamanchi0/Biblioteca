@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="card col-lg-4 mx-auto mt-5 py-2">
+            <h3 class="text-center my-2 mb-4">Inicio de sesión</h3>
+            <form [formGroup]="form" (ngSubmit)="iniciarSesion()">
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label for="txtCorreo" class="text-secondary"><h6>Correo electrónico</h6></label>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text" 
+                            [class.text-success]="form.get('Correo')?.valid"
+                            [class.text-danger]="form.get('Correo')?.invalid && form.get('Correo')?.touched"
+                            ><i class="fa-solid fa-envelope"></i></span>
+                            <input formControlName="Correo" type="text" class="form-control"
+                            [class.is-invalid]="form.get('Correo')?.invalid && form.get('Correo')?.touched"
+                            id="txtCorreo" placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <label for="txtContrasena" class="text-secondary"><h6>Contraseña</h6></label>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text"
+                                [class.text-success]="form.get('Contrasena')?.valid"
+                                [class.text-danger]="form.get('Contrasena')?.invalid && form.get('Contrasena')?.touched"
+                            ><i class="fa-solid fa-key"></i></span>
+                            <input formControlName="Contrasena"  type="password" class="form-control" 
+                                [class.is-invalid]="form.get('Contrasena')?.invalid && form.get('Contrasena')?.touched"
+                                id="txtContrasena" placeholder="Contraseña">
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger text-center" role="alert" *ngIf="error && !isLoading">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        Correo o contraseña incorrectos
+                    </div>
+
+                    <div class="text-center my-3" *ngIf="isLoading">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-success mb-2 w-100" [class.disabled]="form.invalid">Iniciar sesión</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>

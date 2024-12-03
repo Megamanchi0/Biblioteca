@@ -1,0 +1,31 @@
+.inputArchivo{
+    display: none;
+}
+
+.buscar{
+    align-items: center;
+}
+
+.dvArchivos{
+    background-color: rgb(235, 235, 235);
+}
+
+.dvInfo{
+    background-color: rgb(206, 211, 221);
+}
+
+li{
+    cursor: pointer;
+}
+
+li a:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.paginaActual{
+    background-color: rgb(207, 207, 207);
+}
+
+/* .card-archivo{
+    background-color: #243b5571;
+} */

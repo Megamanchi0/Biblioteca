@@ -1,0 +1,11 @@
+# Carpeta node_modules generada por npm/yarn
+/node_modules/
+
+# Archivos de configuración de IDEs
+.vscode/
+*.suo
+*.user
+
+# Archivos generados por compilación
+/dist/
+*.log

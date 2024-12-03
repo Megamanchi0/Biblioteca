@@ -1,0 +1,4 @@
+2024-07-25 15:13:10.678 -05:00 [WRN] Aún hay préstamos activos del perfil con id 31
+2024-07-25 15:13:10.874 -05:00 [ERR] Error al hacer el préstamo: Aún tiene préstamos activos
+2024-07-25 15:51:53.712 -05:00 [WRN] Aún hay préstamos activos del perfil con id 31
+2024-07-25 15:51:53.859 -05:00 [ERR] Error al hacer el préstamo: Aún tiene préstamos activos

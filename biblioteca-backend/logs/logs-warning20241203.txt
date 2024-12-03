@@ -1,0 +1,2 @@
+2024-12-03 12:07:36.354 -05:00 [ERR] Error al descargar archivo: $Could not find file 'C:\Users\spatino\Documents\Proyeco - Biblioteca\biblioteca-backend\Archivos\Sistema de cargue y gestión de archivos.docx'.
+2024-12-03 12:52:20.320 -05:00 [WRN] Correo o contraseña no encontrados

@@ -1,0 +1,3 @@
+2024-08-30 13:00:05.509 -05:00 [WRN] Correo o contraseña no encontrados
+2024-08-30 13:00:16.337 -05:00 [WRN] Correo o contraseña no encontrados
+2024-08-30 13:00:25.990 -05:00 [WRN] Correo o contraseña no encontrados

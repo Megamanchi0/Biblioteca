@@ -1,0 +1,19 @@
+td{
+    max-width: 250px;
+}
+
+li,.cursor{
+    cursor: pointer;
+}
+
+.msgError-oculto{
+    display: none;
+}
+
+form, .buscar{
+    align-items: center;
+}
+
+.paginaActual{
+    background-color: rgb(207, 207, 207);
+}

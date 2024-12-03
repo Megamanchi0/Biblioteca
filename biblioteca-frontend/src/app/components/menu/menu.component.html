@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <span class="input-group-text bg-dark text-white border-0"><i class="fa-solid fa-book-open"></i></span>
+      <a class="navbar-brand" href="#">Biblioteca</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item" *ngIf="esAdmin()">
+                <a class="nav-link" routerLink="/registro-libros">Registro de libros</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogged()">
+                <a class="nav-link" routerLink="/consultar-perfil">Perfil</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="isLogged()">
+                    Prestamo de libros
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" routerLink="/prestamo-libros">Solicitar Préstamo</a></li>
+                    <li><a class="dropdown-item" routerLink="/gestion-prestamo">Gestionar Préstamo</a></li>
+                    <li><a class="dropdown-item" routerLink="/consultar-prestamos" *ngIf="esAdmin()">Préstamos activos</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="isLogged()">
+                    Archivos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" routerLink="/gestion-archivos">Gestión de archivos</a></li>
+                    <li><a class="dropdown-item" routerLink="/historial-archivos" *ngIf="esAdmin()">Historial de cambios</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="d-flex">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" *ngIf="isLogged()">
+                    <a class="nav-link" (click)="cerrarSesion()" ><span class="mx-2"><i class="fa-solid fa-right-to-bracket"></i></span>Cerrar sesión</a>
+                </li>
+                <li class="nav-item" *ngIf="!isLogged()">
+                    <a class="nav-link" routerLink="/login">Iniciar sesión</a>
+                </li>
+                <li class="nav-item" *ngIf="!isLogged()">
+                    <a class="nav-link" routerLink="/registro-perfil">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

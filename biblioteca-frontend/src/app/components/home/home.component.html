@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="col-lg-5">
+        <span class="text-white border-0"><i class="fa-solid fa-book-open"></i></span>
+        <h3 class="mb-2">Gestión de Biblioteca</h3>
+        <div class="col-12 my-3">
+            <button type="button"  class="btn btn-dark btn-lg mx-2 w-75" routerLink="/prestamo-libros">Préstamo de libros</button>
+        </div>
+        <div class="col-12 my-3">
+            <button type="button" class="btn btn-dark btn-lg mx-2 w-75" routerLink="/registro-libros" *ngIf="!isLogged() || esAdmin()">Registro de libros</button>
+        </div>
+    </div>
+</div>

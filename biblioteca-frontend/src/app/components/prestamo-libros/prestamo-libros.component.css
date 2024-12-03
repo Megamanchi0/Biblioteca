@@ -1,0 +1,19 @@
+td{
+    max-width: 250px;
+}
+
+li{
+    cursor: pointer;
+}
+
+.seleccionar{
+    text-align: center;
+}
+
+.row, .buscar{
+    align-items: center;
+}
+
+.paginaActual{
+    background-color: rgb(207, 207, 207);
+}

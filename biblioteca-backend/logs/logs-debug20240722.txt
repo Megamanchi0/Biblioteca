@@ -1,0 +1,357 @@
+2024-07-22 14:55:40.308 -05:00 [INF] User profile is available. Using 'C:\Users\spatino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 14:55:40.994 -05:00 [INF] Now listening on: https://localhost:7299
+2024-07-22 14:55:40.994 -05:00 [INF] Now listening on: http://localhost:5219
+2024-07-22 14:55:40.998 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 14:55:40.998 -05:00 [INF] Hosting environment: Development
+2024-07-22 14:55:40.999 -05:00 [INF] Content root path: C:\Users\spatino\Documents\Proyeco - Biblioteca\biblioteca-backend
+2024-07-22 14:55:41.948 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/index.html - null null
+2024-07-22 14:55:42.730 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/index.html - 200 null text/html;charset=utf-8 792.9708ms
+2024-07-22 14:55:42.825 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 14:55:42.832 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 7.4827ms
+2024-07-22 14:55:42.870 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_vs/browserLink - null null
+2024-07-22 14:55:42.957 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.089ms
+2024-07-22 14:55:43.099 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - null null
+2024-07-22 14:55:43.277 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 178.2627ms
+2024-07-22 14:55:59.022 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Prestmaos/?idPerfil=34 - null null
+2024-07-22 14:55:59.035 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:55:59.036 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Prestmaos/?idPerfil=34 - 204 null null 14.6423ms
+2024-07-22 14:55:59.047 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Prestmaos/?idPerfil=34 - null null
+2024-07-22 14:55:59.049 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:55:59.356 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.PrestmaosController.Get (biblioteca-backend)'
+2024-07-22 14:55:59.387 -05:00 [INF] Route matched with {action = "Get", controller = "Prestmaos"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller biblioteca_backend.Controllers.PrestmaosController (biblioteca-backend).
+2024-07-22 14:55:59.755 -05:00 [INF] Executing action method biblioteca_backend.Controllers.PrestmaosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:56:00.759 -05:00 [INF] Libros encontrados exitosamente
+2024-07-22 14:56:01.926 -05:00 [INF] Executed DbCommand (81ms) [Parameters=[@__idPerfil_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Titulo], [l].[Autor], [l].[IdGenero], [l].[Anio], [l].[Activo]
+FROM [Perfil] AS [p]
+INNER JOIN [Prestamo] AS [p0] ON [p].[Id] = [p0].[IdPerfil]
+INNER JOIN [DetallePrestamoLibro] AS [d] ON [p0].[Id] = [d].[IdPrestamo]
+INNER JOIN [Libro] AS [l] ON [d].[IdLibro] = [l].[Id]
+WHERE [p].[Id] = @__idPerfil_0
+2024-07-22 14:56:01.950 -05:00 [INF] Executed action method biblioteca_backend.Controllers.PrestmaosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2189.3734ms.
+2024-07-22 14:56:01.960 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Collections.Generic.List`1[[biblioteca_backend.Models.Libro, biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-22 14:56:01.975 -05:00 [INF] Executed action biblioteca_backend.Controllers.PrestmaosController.Get (biblioteca-backend) in 2581.8693ms
+2024-07-22 14:56:01.975 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.PrestmaosController.Get (biblioteca-backend)'
+2024-07-22 14:56:01.992 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Prestmaos/?idPerfil=34 - 200 null application/json; charset=utf-8 2944.9571ms
+2024-07-22 14:56:09.533 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:56:09.537 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:56:09.542 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=true - 204 null null 5.3411ms
+2024-07-22 14:56:09.545 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:56:09.546 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:56:09.549 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:56:09.552 -05:00 [INF] Route matched with {action = "Get", controller = "Libros"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Boolean) on controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend).
+2024-07-22 14:56:09.582 -05:00 [INF] Executing action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:56:09.652 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+WHERE [l].[Activo] = CAST(1 AS bit)
+2024-07-22 14:56:09.663 -05:00 [INF] Consulta de libros exitosa
+2024-07-22 14:56:09.664 -05:00 [INF] Executed action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 81.428ms.
+2024-07-22 14:56:09.664 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-22 14:56:09.669 -05:00 [INF] Executed action biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) in 117.0316ms
+2024-07-22 14:56:09.669 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:56:09.669 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - 200 null application/json; charset=utf-8 124.3413ms
+2024-07-22 14:56:12.083 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Prestmaos/ - null null
+2024-07-22 14:56:12.083 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:56:12.084 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Prestmaos/ - 204 null null 1.4559ms
+2024-07-22 14:56:12.086 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7299/api/Prestmaos/ - application/json 297
+2024-07-22 14:56:12.086 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:56:12.091 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend)'
+2024-07-22 14:56:12.096 -05:00 [INF] Route matched with {action = "Post", controller = "Prestmaos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(biblioteca_backend.Models.PrestamoModel) on controller biblioteca_backend.Controllers.PrestmaosController (biblioteca-backend).
+2024-07-22 14:56:12.157 -05:00 [INF] Executing action method biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:56:12.238 -05:00 [INF] Libros encontrados exitosamente
+2024-07-22 14:56:12.245 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__idPerfil_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Titulo], [l].[Autor], [l].[IdGenero], [l].[Anio], [l].[Activo]
+FROM [Perfil] AS [p]
+INNER JOIN [Prestamo] AS [p0] ON [p].[Id] = [p0].[IdPerfil]
+INNER JOIN [DetallePrestamoLibro] AS [d] ON [p0].[Id] = [d].[IdPrestamo]
+INNER JOIN [Libro] AS [l] ON [d].[IdLibro] = [l].[Id]
+WHERE [p].[Id] = @__idPerfil_0
+2024-07-22 14:56:12.498 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Prestamo] ([FechaPrestamo], [IdPerfil])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-07-22 14:56:12.575 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [DetallePrestamoLibro] ([IdLibro], [IdPrestamo])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-07-22 14:56:12.636 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Libro] SET [Activo] = @p0, [Anio] = @p1, [Autor] = @p2, [IdGenero] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2024-07-22 14:56:12.647 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [DetallePrestamoLibro] ([IdLibro], [IdPrestamo])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-07-22 14:56:12.650 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Libro] SET [Activo] = @p0, [Anio] = @p1, [Autor] = @p2, [IdGenero] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2024-07-22 14:56:12.652 -05:00 [INF] Préstamo realizado exitosamente
+2024-07-22 14:56:12.654 -05:00 [INF] Executed action method biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 497.1143ms.
+2024-07-22 14:56:12.658 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-22 14:56:12.660 -05:00 [INF] Executed action biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend) in 563.9491ms
+2024-07-22 14:56:12.661 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend)'
+2024-07-22 14:56:12.662 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7299/api/Prestmaos/ - 200 null application/json; charset=utf-8 576.5971ms
+2024-07-22 14:56:12.668 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:56:12.669 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:56:12.669 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:56:12.670 -05:00 [INF] Route matched with {action = "Get", controller = "Libros"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Boolean) on controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend).
+2024-07-22 14:56:12.709 -05:00 [INF] Executing action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:56:12.711 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+WHERE [l].[Activo] = CAST(1 AS bit)
+2024-07-22 14:56:12.714 -05:00 [INF] Consulta de libros exitosa
+2024-07-22 14:56:12.714 -05:00 [INF] Executed action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.1787ms.
+2024-07-22 14:56:12.714 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-22 14:56:12.715 -05:00 [INF] Executed action biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) in 44.6736ms
+2024-07-22 14:56:12.715 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:56:12.715 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - 200 null application/json; charset=utf-8 47.3328ms
+2024-07-22 14:56:15.386 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7299/api/Prestmaos/ - application/json 536
+2024-07-22 14:56:15.386 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:56:15.387 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend)'
+2024-07-22 14:56:15.387 -05:00 [INF] Route matched with {action = "Post", controller = "Prestmaos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(biblioteca_backend.Models.PrestamoModel) on controller biblioteca_backend.Controllers.PrestmaosController (biblioteca-backend).
+2024-07-22 14:56:15.414 -05:00 [INF] Executing action method biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:56:15.417 -05:00 [INF] Libros encontrados exitosamente
+2024-07-22 14:56:15.424 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__idPerfil_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Titulo], [l].[Autor], [l].[IdGenero], [l].[Anio], [l].[Activo]
+FROM [Perfil] AS [p]
+INNER JOIN [Prestamo] AS [p0] ON [p].[Id] = [p0].[IdPerfil]
+INNER JOIN [DetallePrestamoLibro] AS [d] ON [p0].[Id] = [d].[IdPrestamo]
+INNER JOIN [Libro] AS [l] ON [d].[IdLibro] = [l].[Id]
+WHERE [p].[Id] = @__idPerfil_0
+2024-07-22 14:56:15.432 -05:00 [WRN] Aún hay préstamos activos del perfil con id 34
+2024-07-22 14:56:15.540 -05:00 [ERR] Error al hacer el préstamo: Aún tiene préstamos activos
+2024-07-22 14:56:15.724 -05:00 [INF] Executed action method biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 310.1122ms.
+2024-07-22 14:56:15.725 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-07-22 14:56:15.725 -05:00 [INF] Executed action biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend) in 338.1421ms
+2024-07-22 14:56:15.725 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.PrestmaosController.Post (biblioteca-backend)'
+2024-07-22 14:56:15.726 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7299/api/Prestmaos/ - 400 null text/plain; charset=utf-8 339.6594ms
+2024-07-22 14:57:37.357 -05:00 [INF] User profile is available. Using 'C:\Users\spatino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 14:57:37.749 -05:00 [INF] Now listening on: https://localhost:7299
+2024-07-22 14:57:37.749 -05:00 [INF] Now listening on: http://localhost:5219
+2024-07-22 14:57:37.757 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 14:57:37.757 -05:00 [INF] Hosting environment: Development
+2024-07-22 14:57:37.757 -05:00 [INF] Content root path: C:\Users\spatino\Documents\Proyeco - Biblioteca\biblioteca-backend
+2024-07-22 14:57:38.197 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/index.html - null null
+2024-07-22 14:57:38.696 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/index.html - 200 null text/html;charset=utf-8 505.2683ms
+2024-07-22 14:57:38.774 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 14:57:38.796 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_vs/browserLink - null null
+2024-07-22 14:57:38.838 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 64.4767ms
+2024-07-22 14:57:38.973 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_vs/browserLink - 200 null text/javascript; charset=UTF-8 177.071ms
+2024-07-22 14:57:39.073 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - null null
+2024-07-22 14:57:39.268 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 195.2784ms
+2024-07-22 14:57:51.390 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:57:51.421 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:57:51.422 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=true - 204 null null 32.5143ms
+2024-07-22 14:57:51.425 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:57:51.427 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:57:51.631 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:57:51.658 -05:00 [INF] Route matched with {action = "Get", controller = "Libros"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Boolean) on controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend).
+2024-07-22 14:57:52.053 -05:00 [INF] Executing action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:57:54.032 -05:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+WHERE [l].[Activo] = CAST(1 AS bit)
+2024-07-22 14:57:54.061 -05:00 [INF] Consulta de libros exitosa
+2024-07-22 14:57:54.069 -05:00 [INF] Executed action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2007.5873ms.
+2024-07-22 14:57:54.078 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-22 14:57:54.105 -05:00 [INF] Executed action biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) in 2436.9942ms
+2024-07-22 14:57:54.105 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:57:54.122 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - 200 null application/json; charset=utf-8 2697.7988ms
+2024-07-22 14:59:44.958 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-07-22 14:59:45.123 -05:00 [DBG] Hosting starting
+2024-07-22 14:59:45.184 -05:00 [INF] User profile is available. Using 'C:\Users\spatino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 14:59:45.192 -05:00 [DBG] Reading data from file 'C:\Users\spatino\AppData\Local\ASP.NET\DataProtection-Keys\key-12ed5171-7863-4d3e-a216-6f5439158e60.xml'.
+2024-07-22 14:59:45.203 -05:00 [DBG] Found key {12ed5171-7863-4d3e-a216-6f5439158e60}.
+2024-07-22 14:59:45.213 -05:00 [DBG] Considering key {12ed5171-7863-4d3e-a216-6f5439158e60} with expiration date 2024-09-28 19:27:42Z as default key.
+2024-07-22 14:59:45.216 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-07-22 14:59:45.219 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-07-22 14:59:45.221 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-07-22 14:59:45.228 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-07-22 14:59:45.231 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-07-22 14:59:45.235 -05:00 [DBG] Using key {12ed5171-7863-4d3e-a216-6f5439158e60} as the default key.
+2024-07-22 14:59:45.236 -05:00 [DBG] Key ring with default key {12ed5171-7863-4d3e-a216-6f5439158e60} was loaded during application startup.
+2024-07-22 14:59:45.593 -05:00 [INF] Now listening on: https://localhost:7299
+2024-07-22 14:59:45.594 -05:00 [INF] Now listening on: http://localhost:5219
+2024-07-22 14:59:45.594 -05:00 [DBG] Loaded hosting startup assembly biblioteca-backend
+2024-07-22 14:59:45.594 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-07-22 14:59:45.594 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-07-22 14:59:45.597 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 14:59:45.597 -05:00 [INF] Hosting environment: Development
+2024-07-22 14:59:45.597 -05:00 [INF] Content root path: C:\Users\spatino\Documents\Proyeco - Biblioteca\biblioteca-backend
+2024-07-22 14:59:45.598 -05:00 [DBG] Hosting started
+2024-07-22 14:59:46.010 -05:00 [DBG] Connection id "0HN5AH3ATQN43" accepted.
+2024-07-22 14:59:46.011 -05:00 [DBG] Connection id "0HN5AH3ATQN43" started.
+2024-07-22 14:59:46.017 -05:00 [DBG] Connection id "0HN5AH3ATQN44" accepted.
+2024-07-22 14:59:46.017 -05:00 [DBG] Connection id "0HN5AH3ATQN44" started.
+2024-07-22 14:59:46.050 -05:00 [DBG] Connection id "0HN5AH3ATQN43" received FIN.
+2024-07-22 14:59:46.050 -05:00 [DBG] Connection id "0HN5AH3ATQN44" received FIN.
+2024-07-22 14:59:46.081 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-07-22 14:59:46.081 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-07-22 14:59:46.154 -05:00 [DBG] Connection id "0HN5AH3ATQN44" stopped.
+2024-07-22 14:59:46.154 -05:00 [DBG] Connection id "0HN5AH3ATQN43" stopped.
+2024-07-22 14:59:46.161 -05:00 [DBG] Connection id "0HN5AH3ATQN43" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-22 14:59:46.161 -05:00 [DBG] Connection id "0HN5AH3ATQN44" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-22 14:59:46.279 -05:00 [DBG] Connection id "0HN5AH3ATQN45" accepted.
+2024-07-22 14:59:46.279 -05:00 [DBG] Connection id "0HN5AH3ATQN45" started.
+2024-07-22 14:59:46.467 -05:00 [DBG] Connection 0HN5AH3ATQN45 established using the following protocol: "Tls12"
+2024-07-22 14:59:46.571 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/index.html - null null
+2024-07-22 14:59:46.906 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-07-22 14:59:46.939 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-07-22 14:59:46.940 -05:00 [DBG] Request did not match any endpoints
+2024-07-22 14:59:47.055 -05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-07-22 14:59:47.056 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-07-22 14:59:47.137 -05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-07-22 14:59:47.138 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-07-22 14:59:47.143 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/index.html - 200 null text/html;charset=utf-8 583.9403ms
+2024-07-22 14:59:47.174 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 14:59:47.191 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/_vs/browserLink - null null
+2024-07-22 14:59:47.198 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 24.1679ms
+2024-07-22 14:59:47.364 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/_vs/browserLink - 200 null text/javascript; charset=UTF-8 173.07ms
+2024-07-22 14:59:47.469 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - null null
+2024-07-22 14:59:47.474 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-07-22 14:59:47.474 -05:00 [DBG] Request did not match any endpoints
+2024-07-22 14:59:47.705 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 235.6257ms
+2024-07-22 14:59:52.363 -05:00 [DBG] Connection id "0HN5AH3ATQN46" accepted.
+2024-07-22 14:59:52.365 -05:00 [DBG] Connection id "0HN5AH3ATQN46" started.
+2024-07-22 14:59:52.391 -05:00 [DBG] Connection 0HN5AH3ATQN46 established using the following protocol: "Tls12"
+2024-07-22 14:59:52.397 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:59:52.407 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Libros/'
+2024-07-22 14:59:52.408 -05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2024-07-22 14:59:52.415 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-07-22 14:59:52.418 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-07-22 14:59:52.418 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:59:52.420 -05:00 [DBG] The request is a preflight request.
+2024-07-22 14:59:52.422 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/Libros/?mostrarActivos=true - 204 null null 24.8561ms
+2024-07-22 14:59:52.425 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - null null
+2024-07-22 14:59:52.425 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Libros/'
+2024-07-22 14:59:52.435 -05:00 [DBG] Endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)' with route pattern 'api/Libros' is valid for the request path '/api/Libros/'
+2024-07-22 14:59:52.435 -05:00 [DBG] Request matched endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:59:52.436 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-07-22 14:59:52.437 -05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2024-07-22 14:59:52.437 -05:00 [INF] CORS policy execution successful.
+2024-07-22 14:59:52.739 -05:00 [DBG] Successfully validated the token.
+2024-07-22 14:59:52.742 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-07-22 14:59:52.752 -05:00 [DBG] Authorization was successful.
+2024-07-22 14:59:52.753 -05:00 [INF] Executing endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:59:52.785 -05:00 [INF] Route matched with {action = "Get", controller = "Libros"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Boolean) on controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend).
+2024-07-22 14:59:52.789 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-07-22 14:59:52.789 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-07-22 14:59:52.790 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-07-22 14:59:52.791 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-07-22 14:59:52.791 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-07-22 14:59:52.796 -05:00 [DBG] Executing controller factory for controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend)
+2024-07-22 14:59:52.968 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-07-22 14:59:52.992 -05:00 [DBG] Executed controller factory for controller biblioteca_backend.Controllers.LibrosController (biblioteca-backend)
+2024-07-22 14:59:53.017 -05:00 [DBG] Attempting to bind parameter 'mostrarActivos' of type 'System.Boolean' ...
+2024-07-22 14:59:53.022 -05:00 [DBG] Attempting to bind parameter 'mostrarActivos' of type 'System.Boolean' using the name 'mostrarActivos' in request data ...
+2024-07-22 14:59:53.024 -05:00 [DBG] Done attempting to bind parameter 'mostrarActivos' of type 'System.Boolean'.
+2024-07-22 14:59:53.025 -05:00 [DBG] Done attempting to bind parameter 'mostrarActivos' of type 'System.Boolean'.
+2024-07-22 14:59:53.025 -05:00 [DBG] Attempting to validate the bound parameter 'mostrarActivos' of type 'System.Boolean' ...
+2024-07-22 14:59:53.028 -05:00 [DBG] Done attempting to validate the bound parameter 'mostrarActivos' of type 'System.Boolean'.
+2024-07-22 14:59:53.128 -05:00 [INF] Executing action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) - Validation state: "Valid"
+2024-07-22 14:59:53.148 -05:00 [DBG] Consultando libros...
+2024-07-22 14:59:54.088 -05:00 [DBG] Entity Framework Core 8.0.6 initialized 'DBBibliotecaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-07-22 14:59:54.178 -05:00 [DBG] Compiling query expression: 
+'DbSet<Libro>()
+    .Join(
+        inner: DbSet<Genero>(), 
+        outerKeySelector: L => L.IdGenero, 
+        innerKeySelector: G => G.Id, 
+        resultSelector: (L, G) => new { 
+            L = L, 
+            G = G
+         })
+    .Where(<>h__TransparentIdentifier0 => True && <>h__TransparentIdentifier0.L.Activo == True || False)
+    .Select(<>h__TransparentIdentifier0 => new { 
+        id = <>h__TransparentIdentifier0.L.Id, 
+        titulo = <>h__TransparentIdentifier0.L.Titulo, 
+        autor = <>h__TransparentIdentifier0.L.Autor, 
+        anio = <>h__TransparentIdentifier0.L.Anio, 
+        idGenero = <>h__TransparentIdentifier0.L.IdGenero, 
+        genero = <>h__TransparentIdentifier0.G.Nombre, 
+        activo = <>h__TransparentIdentifier0.L.Activo
+     })'
+2024-07-22 14:59:54.706 -05:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<<>f__AnonymousType1<int, string, string, int, int, string, bool>>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            id -> 0
+            titulo -> 1
+            autor -> 2
+            anio -> 3
+            idGenero -> 4
+            genero -> 5
+            activo -> 6
+        SELECT l.Id AS id, l.Titulo AS titulo, l.Autor AS autor, l.Anio AS anio, l.IdGenero AS idGenero, g.Nombre AS genero, l.Activo AS activo
+        FROM Libro AS l
+        INNER JOIN Genero AS g ON l.IdGenero == g.Id
+        WHERE (CAST(1 AS bit) && (l.Activo == CAST(1 AS bit))) || CAST(0 AS bit)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, <>f__AnonymousType1<int, string, string, int, int, string, bool>>, 
+    biblioteca_backend.DBBibliotecaContext, 
+    False, 
+    False, 
+    True
+)'
+2024-07-22 14:59:54.750 -05:00 [DBG] Creating DbConnection.
+2024-07-22 14:59:54.775 -05:00 [DBG] Created DbConnection. (23ms).
+2024-07-22 14:59:54.780 -05:00 [DBG] Opening connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-07-22 14:59:55.214 -05:00 [DBG] Opened connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-07-22 14:59:55.216 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-07-22 14:59:55.224 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (3ms).
+2024-07-22 14:59:55.228 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (10ms).
+2024-07-22 14:59:55.237 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+WHERE [l].[Activo] = CAST(1 AS bit)
+2024-07-22 14:59:55.298 -05:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [id], [l].[Titulo] AS [titulo], [l].[Autor] AS [autor], [l].[Anio] AS [anio], [l].[IdGenero] AS [idGenero], [g].[Nombre] AS [genero], [l].[Activo] AS [activo]
+FROM [Libro] AS [l]
+INNER JOIN [Genero] AS [g] ON [l].[IdGenero] = [g].[Id]
+WHERE [l].[Activo] = CAST(1 AS bit)
+2024-07-22 14:59:55.312 -05:00 [DBG] Closing data reader to 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-07-22 14:59:55.319 -05:00 [DBG] A data reader for 'DBBiblioteca' on server '(local)\SQLEXPRESS' is being disposed after spending 15ms reading results.
+2024-07-22 14:59:55.321 -05:00 [DBG] Closing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-07-22 14:59:55.329 -05:00 [DBG] Closed connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS' (7ms).
+2024-07-22 14:59:55.332 -05:00 [INF] Consulta de libros exitosa
+2024-07-22 14:59:55.336 -05:00 [INF] Executed action method biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2203.9762ms.
+2024-07-22 14:59:55.339 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-07-22 14:59:55.345 -05:00 [DBG] No information found on request to perform content negotiation.
+2024-07-22 14:59:55.345 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-22 14:59:55.345 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-22 14:59:55.346 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-22 14:59:55.347 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], biblioteca-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-22 14:59:55.367 -05:00 [INF] Executed action biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend) in 2571.7249ms
+2024-07-22 14:59:55.367 -05:00 [INF] Executed endpoint 'biblioteca_backend.Controllers.LibrosController.Get (biblioteca-backend)'
+2024-07-22 14:59:55.370 -05:00 [DBG] 'DBBibliotecaContext' disposed.
+2024-07-22 14:59:55.379 -05:00 [DBG] Disposing connection to database 'DBBiblioteca' on server '(local)\SQLEXPRESS'.
+2024-07-22 14:59:55.381 -05:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-07-22 14:59:55.381 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/Libros/?mostrarActivos=true - 200 null application/json; charset=utf-8 2956.8003ms

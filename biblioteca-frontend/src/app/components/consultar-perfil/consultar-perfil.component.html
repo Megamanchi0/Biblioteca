@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row my-5 mx-2">
+        <div class="card col-lg-7 mx-auto mt-5 py-2">
+            <h3 class="text-center my-2 mb-4">Perfil</h3>
+            <form [formGroup]="form" (ngSubmit)="actualizarPerfil()">
+                <div class="form-row align-items-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="txtNombre" class="text-secondary"><h6>Nombre</h6></label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text"
+                                    [class.text-success]="form.get('Nombre')?.valid"
+                                    [class.text-danger]="form.get('Nombre')?.invalid && form.get('Nombre')?.touched"
+                                ><i class="fa-solid fa-user"></i></span>
+                                <input formControlName="Nombre"  type="text" class="form-control" 
+                                    [class.is-invalid]="form.get('Nombre')?.invalid && form.get('Nombre')?.touched"
+                                    id="txtNombre" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="txtApellido" class="text-secondary"><h6>Apellido</h6></label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text"
+                                    [class.text-success]="form.get('Apellido')?.valid"
+                                    [class.text-danger]="form.get('Apellido')?.invalid && form.get('Apellido')?.touched"
+                                ><i class="fa-solid fa-id-card"></i></span>
+                                <input formControlName="Apellido"  type="text" class="form-control" 
+                                    [class.is-invalid]="form.get('Apellido')?.invalid && form.get('Apellido')?.touched"
+                                    id="txtApellido" placeholder="Apellido">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="txtCorreo" class="text-secondary"><h6>Correo electrónico</h6></label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" 
+                                [class.text-success]="form.get('Correo')?.valid"
+                                [class.text-danger]="form.get('Correo')?.invalid && form.get('Correo')?.touched"
+                                ><i class="fa-solid fa-envelope"></i></span>
+                                <input formControlName="Correo" type="email" class="form-control"
+                                [class.is-invalid]="form.get('Correo')?.invalid && form.get('Correo')?.touched"
+                                id="txtCorreo" placeholder="Correo electrónico">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="txtDireccion" class="text-secondary"><h6>Dirección</h6></label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text"
+                                    [class.text-success]="form.get('Direccion')?.valid"
+                                    [class.text-danger]="form.get('Direccion')?.invalid && form.get('Direccion')?.touched"
+                                ><i class="fa-solid fa-location-dot"></i></span>
+                                <input formControlName="Direccion"  type="text" class="form-control" 
+                                    [class.is-invalid]="form.get('Direccion')?.invalid && form.get('Direccion')?.touched"
+                                    id="txtDireccion" placeholder="Dirección">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="txtTelefono" class="text-secondary"><h6>Teléfono</h6></label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" 
+                                [class.text-success]="form.get('Telefono')?.valid"
+                                [class.text-danger]="form.get('Telefono')?.invalid && form.get('Telefono')?.touched"
+                                ><i class="fa-solid fa-phone"></i></span>
+                                <input formControlName="Telefono" type="text" class="form-control"
+                                [class.is-invalid]="form.get('Telefono')?.invalid && form.get('Telefono')?.touched"
+                                id="txtTelefono" placeholder="Teléfono">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div *ngIf="mostrarError" class="alert alert-danger text-center mt-2" role="alert">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        {{msgError}}
+                    </div>
+                    <div *ngIf="!inputsActivos" class="text-center">
+                        <button type="button" class="btn btn-primary my-2 w-50" (click)="activarInputs()">Modificar perfil</button>
+                    </div>
+                    <div *ngIf="inputsActivos" class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary my-2 w-100" (click)="desactivarInputs()">Cancelar</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success my-2 w-100" [class.disabled]="form.invalid">Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>

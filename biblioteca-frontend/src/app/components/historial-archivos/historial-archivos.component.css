@@ -1,0 +1,19 @@
+.dvArchivos{
+    background-color: rgb(235, 235, 235);
+}
+
+td{
+    max-width: 250px;
+}
+
+li{
+    cursor: pointer;
+}
+
+li a:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.paginaActual{
+    background-color: rgb(207, 207, 207);
+}

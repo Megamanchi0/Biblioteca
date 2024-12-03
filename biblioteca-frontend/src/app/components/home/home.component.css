@@ -1,0 +1,18 @@
+div{
+    text-align: center;
+    margin-inline: auto;
+}
+
+h3, button{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+}
+
+span{
+    font-size: 200px;
+    color: rgb(212, 212, 212);
+}
+
+h3{
+    color: rgb(212, 212, 212);
+}
