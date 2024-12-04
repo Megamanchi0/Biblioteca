@@ -6,7 +6,7 @@ Para ejecutar el proyecto:
 2. Restaurar el back-up de la base de datos en SQL Server.
 3. Crear una variable de entorno con el nombre "DB_BIBLIOTECA" que contenga la cadena de conexión a la base de datos.
   Ejemplo de cadena de conexión: Data Source=[Nombre_dispositivo];Database=DBBiblioteca;Trusted_Connection=True;MultipleActiveResultSets=True;user id=[usuario];pwd=[contraseña];TrustServerCertificate=true;
-4. Crear una variable de entorno con el nombre "API_KEY" con el siguiente valor: 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
+4. Si se desea usar la API (Send Grid) para enviar el correo de confirmación al registrarse, debe escribir al correo menlockfull@gmail.com solicitando la API Key y luego crear una variable de entorno con el nombre "API_KEY" y su valor correspondiente, ya que no es posible ponerla directamente en este repositorio.
 5. En el proyecto biblioteca-frontend ejecutar el comando "npm install" para instalar las dependencias faltantes de Node.
 6. Ejecutar los servidores del back-end y front-end, respectivamente.
 
