@@ -1,4 +1,4 @@
-Proyecto de gestión de una biblioteca y de manejo de archivos realizado con fines de aprendizaje.
+Proyecto de gestión de una biblioteca y de manejo de archivos realizado con fines de aprendizaje. Se implementó una API RESTful, consumo de APIs externas, autenticación con JWT, entre otras cosas.
 
 Para ejecutar el proyecto:
 
